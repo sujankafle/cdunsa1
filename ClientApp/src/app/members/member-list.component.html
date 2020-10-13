@@ -1,0 +1,35 @@
+<h1 id="tableLabel">Member List</h1>
+<p>All active members.</p>
+<div>
+  <a class="btn btn-primary" href="/admin/members/add">Register new member</a>
+</div>
+
+<p *ngIf="!members"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="members">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Course</th>
+      <th>Student Number</th>
+      <th>Phone Number</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of members">
+      <td>{{ member.name }}</td>
+      <td>{{ member.email }}</td>
+      <td>{{ member.course }}</td>
+      <td>{{ member.studentNumber }}</td>
+      <td>{{ member.phoneNumber }}</td>
+      <td>
+        <div>
+          <a href="admin/members/edit/{{member.id}}" class="btn btn-primary">Edit</a>
+          <button class="btn btn-danger">Delete</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
