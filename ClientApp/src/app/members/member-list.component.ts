@@ -8,19 +8,24 @@ import { HttpClient } from '@angular/common/http';
 export class MemberListComponent {
   public members: MemberItem[];
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string)
-  {
-    http.get<MemberItem[]>(baseUrl + 'api/members').subscribe(result => {
+  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
+    this.http.get<MemberItem[]>(this.baseUrl + 'api/members').subscribe(result => {
       this.members = result;
     }, error => console.error(error));
   }
- /* delete(Id) {
-    const ans = confirm('Do you want to delete blog post with id: ' + Id);
+  delete(id) {
+    const ans = confirm('Do you want to delete blog post with id: ' + id);
     if (ans) {
-      this.members.data.id.subscribe((data) => {
-        this.members();
-      });
+      let endpoint = this.baseUrl + 'api/members/' + id;
+      this.http.delete(endpoint).subscribe(result => {
+        let index = this.members.findIndex(x => x.id === id);
+        debugger;
+        if (index > -1) {
+          this.members.splice(index, 1);
+
+        }
+      }, error => console.error(error));
     }
-  }*/
+  }
 }
 

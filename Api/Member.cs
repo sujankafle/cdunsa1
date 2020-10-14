@@ -8,7 +8,7 @@ namespace CduNsa.Api
         public Guid Id { get; set; }
         [Required]
         public string Name { get; set; }
-        [Required]
+        [Required,EmailAddress]
         public string Email { get; set; }
         [Required]
         public string Course { get; set; }
