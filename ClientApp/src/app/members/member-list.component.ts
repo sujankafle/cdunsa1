@@ -14,11 +14,11 @@ export class MemberListComponent {
       this.members = result;
     }, error => console.error(error));
   }
-  /*delete(Id) {
+ /* delete(Id) {
     const ans = confirm('Do you want to delete blog post with id: ' + Id);
     if (ans) {
-      this._identityservice.deleteIdentity(Id).subscribe((data) => {
-        this.loadIdentities();
+      this.members.data.id.subscribe((data) => {
+        this.members();
       });
     }
   }*/

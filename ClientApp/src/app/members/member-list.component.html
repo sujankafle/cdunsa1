@@ -27,7 +27,7 @@
       <td>
         <div>
           <a href="admin/members/edit/{{member.id}}" class="btn btn-primary">Edit</a>
-          <button class="btn btn-danger">Delete</button>
+          <button (click)="delete(id.id)" class="btn btn-danger">Delete</button>
         </div>
       </td>
     </tr>
