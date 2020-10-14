@@ -1,2 +1,41 @@
-<h1>Hello, world!</h1>
-<p>Support Us</p>
+<h1>Support us by making a donation!</h1>
+<form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter Full Name" formControlName="name">
+    <small id="nameHelp" class="form-text text-muted">Provide Full Name.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="text" inputmode="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" formControlName="email">
+    <small id="emailHelp" class="form-text text-muted">Provide E-mail.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="cardNumber">Card Number</label>
+    <input type="text" inputmode="numeric" class="form-control" id="cardNumber" aria-describedby="cardNumberHelp" placeholder="Enter Card Number" formControlName="cardNumber" maxlength="16">
+    <small id="cardNumberHelp" class="form-text text-muted">Enter Card Number.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="expiry">Expiry Date</label>
+    <input type="month" class="form-control" id="expiry" aria-describedby="expiryHelp" placeholder="Enter Expiry Date" formControlName="expiry">
+    <small id="expiryHelp" class="form-text text-muted">Enter Expiry Date.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="cvv">CVV</label>
+    <input type="text" inputmode="numeric" class="form-control" id="cvv" aria-describedby="cvvHelp" placeholder="Enter Security Pin" formControlName="cvv" maxlength="3">
+    <small id="cvvHelp" class="form-text text-muted">Enter the Security Pin.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input type="text" inputmode="numeric" class="form-control" id="amount" aria-describedby="amountHelp" placeholder="Enter Amount" formControlName="amount">
+    <small id="nameHelp" class="form-text text-muted">Enter the Amount.</small>
+  </div>
+  <button class="btn btn-primary" type="submit">Pay Now</button>
+
+</form>
+
